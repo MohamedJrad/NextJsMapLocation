@@ -16,6 +16,13 @@
     "jsx": "preserve",
     "noImplicitAny": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "custom.d.ts", "next.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "custom.d.ts",
+    "next.config.js",
+    "src/components/pages/Home/index.jsx"
+  ],
   "exclude": ["node_modules"]
 }
