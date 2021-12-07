@@ -1,0 +1,498 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 12,
+  "numPassedTests": 43,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 12,
+  "numTotalTests": 43,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1623495531487,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state display the correct items",
+          "location": null,
+          "status": "passed",
+          "title": "display the correct items"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state change the total when the counter fired",
+          "location": null,
+          "status": "passed",
+          "title": "change the total when the counter fired"
+        }
+      ],
+      "endTime": 1623495545022,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/molecules/CartItem/spec.tsx",
+      "startTime": 1623495533305,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state calls \"onClick\" prop on button click",
+          "location": null,
+          "status": "passed",
+          "title": "calls \"onClick\" prop on button click"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state show the correct  items",
+          "location": null,
+          "status": "passed",
+          "title": "show the correct  items"
+        },
+        {
+          "ancestorTitles": ["Component in Disabled state"],
+          "failureMessages": [],
+          "fullName": "Component in Disabled state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Disabled state"],
+          "failureMessages": [],
+          "fullName": "Component in Disabled state disabled",
+          "location": null,
+          "status": "passed",
+          "title": "disabled"
+        }
+      ],
+      "endTime": 1623495545080,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/CartAtoms/CheckoutButton/spec.tsx",
+      "startTime": 1623495533453,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Empty state"],
+          "failureMessages": [],
+          "fullName": "Component in Empty state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Empty state"],
+          "failureMessages": [],
+          "fullName": "Component in Empty state disable the checkout button",
+          "location": null,
+          "status": "passed",
+          "title": "disable the checkout button"
+        },
+        {
+          "ancestorTitles": ["Component in ManyItems state"],
+          "failureMessages": [],
+          "fullName": "Component in ManyItems state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        }
+      ],
+      "endTime": 1623495545348,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/organisms/Cart/spec.tsx",
+      "startTime": 1623495533188,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        }
+      ],
+      "endTime": 1623495548171,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/MenuAtoms/MenuNavbar/spec.tsx",
+      "startTime": 1623495545211,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state show the correct title ",
+          "location": null,
+          "status": "passed",
+          "title": "show the correct title "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state show the correct content",
+          "location": null,
+          "status": "passed",
+          "title": "show the correct content"
+        }
+      ],
+      "endTime": 1623495548241,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/CartAtoms/CartDrawer/spec.tsx",
+      "startTime": 1623495545216,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state shows the items",
+          "location": null,
+          "status": "passed",
+          "title": "shows the items"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state increase the counter",
+          "location": null,
+          "status": "passed",
+          "title": "increase the counter"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state decrease the counter",
+          "location": null,
+          "status": "passed",
+          "title": "decrease the counter"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state disable the subtract button when the number is 1",
+          "location": null,
+          "status": "passed",
+          "title": "disable the subtract button when the number is 1"
+        },
+        {
+          "ancestorTitles": ["the counter in 25"],
+          "failureMessages": [],
+          "fullName": "the counter in 25 disable the add button when the number is 25",
+          "location": null,
+          "status": "passed",
+          "title": "disable the add button when the number is 25"
+        },
+        {
+          "ancestorTitles": ["the counter in 1"],
+          "failureMessages": [],
+          "fullName": "the counter in 1 disable the subtract button when the number is 1",
+          "location": null,
+          "status": "passed",
+          "title": "disable the subtract button when the number is 1"
+        },
+        {
+          "ancestorTitles": ["helpers"],
+          "failureMessages": [],
+          "fullName": "helpers increase the number",
+          "location": null,
+          "status": "passed",
+          "title": "increase the number"
+        },
+        {
+          "ancestorTitles": ["helpers"],
+          "failureMessages": [],
+          "fullName": "helpers decrease the number",
+          "location": null,
+          "status": "passed",
+          "title": "decrease the number"
+        },
+        {
+          "ancestorTitles": ["'add' utility"],
+          "failureMessages": [],
+          "fullName": "'add' utility given 2 , returns 3",
+          "location": null,
+          "status": "passed",
+          "title": "given 2 , returns 3"
+        },
+        {
+          "ancestorTitles": ["'add' utility"],
+          "failureMessages": [],
+          "fullName": "'add' utility given 1 , returns 2",
+          "location": null,
+          "status": "passed",
+          "title": "given 1 , returns 2"
+        },
+        {
+          "ancestorTitles": ["'add' utility"],
+          "failureMessages": [],
+          "fullName": "'add' utility given 7 , returns 8",
+          "location": null,
+          "status": "passed",
+          "title": "given 7 , returns 8"
+        }
+      ],
+      "endTime": 1623495548814,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/CartAtoms/Counter/spec.tsx",
+      "startTime": 1623495545423,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state show the correct number",
+          "location": null,
+          "status": "passed",
+          "title": "show the correct number"
+        }
+      ],
+      "endTime": 1623495549815,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/NavbarAtoms/NavbarCartTotal/spec.tsx",
+      "startTime": 1623495548318,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["ProductCard in Default state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Default state  renders ",
+          "location": null,
+          "status": "passed",
+          "title": " renders "
+        },
+        {
+          "ancestorTitles": ["ProductCard in Default state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Default state show the right elements",
+          "location": null,
+          "status": "passed",
+          "title": "show the right elements"
+        },
+        {
+          "ancestorTitles": ["ProductCard in Default state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Default state calls \"onClick\" when clicked",
+          "location": null,
+          "status": "passed",
+          "title": "calls \"onClick\" when clicked"
+        },
+        {
+          "ancestorTitles": ["ProductCard in Picked state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Picked state  renders ",
+          "location": null,
+          "status": "passed",
+          "title": " renders "
+        },
+        {
+          "ancestorTitles": ["ProductCard in Picked state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Picked state show the right elements",
+          "location": null,
+          "status": "passed",
+          "title": "show the right elements"
+        },
+        {
+          "ancestorTitles": ["ProductCard in Picked state"],
+          "failureMessages": [],
+          "fullName": "ProductCard in Picked state calls \"onClick\" when clicked",
+          "location": null,
+          "status": "passed",
+          "title": "calls \"onClick\" when clicked"
+        }
+      ],
+      "endTime": 1623495550333,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/MenuAtoms/ProductCard/spec.tsx",
+      "startTime": 1623495548914,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in RedBackground state"],
+          "failureMessages": [],
+          "fullName": "Component in RedBackground state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        }
+      ],
+      "endTime": 1623495550829,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/NavbarAtoms/NavbarButton/spec.tsx",
+      "startTime": 1623495549883,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state calls \"onClick\" prop on button click",
+          "location": null,
+          "status": "passed",
+          "title": "calls \"onClick\" prop on button click"
+        },
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state show the correct number of items",
+          "location": null,
+          "status": "passed",
+          "title": "show the correct number of items"
+        }
+      ],
+      "endTime": 1623495551011,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/CartAtoms/CartIcon/spec.tsx",
+      "startTime": 1623495548272,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        }
+      ],
+      "endTime": 1623495551233,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/atoms/NavbarAtoms/NavbarContainer/spec.tsx",
+      "startTime": 1623495550364,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Component in Default state"],
+          "failureMessages": [],
+          "fullName": "Component in Default state renders ",
+          "location": null,
+          "status": "passed",
+          "title": "renders "
+        }
+      ],
+      "endTime": 1623495551459,
+      "message": "",
+      "name": "/home/muhammad/Documents/projects/Ftera/FteraOnline/Free-Ftayer/KingFood/src/components/pages/Home/spec.tsx",
+      "startTime": 1623495550893,
+      "status": "passed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}
