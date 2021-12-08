@@ -1,31 +1,44 @@
-import { gql, ApolloServer, makeExecutableSchema } from 'apollo-server-micro'
+import { ApolloServer } from 'apollo-server-micro'
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+import { typeDefs } from './typeDefs'
+import { resolvers } from './resolvers';
+import { connectDB } from './mongodb'
+const jwt = require('jsonwebtoken')
 
-const typeDefs = gql`
-  type User {
-    id: ID
-  }
+connectDB()
 
-  type Query {
-    getUser: User
-  }
-`;
 
-const resolvers = {
-    Query: {
-        getUser: () => {
-            return {
-                id: "Foo",
-            };
-        },
-    },
-};
+const getUser = token => {
+    try {
+        if (token) {
+            return jwt.verify(token, process.env.JWT_SECRET)
+        }
+        return null
+    } catch (error) {
+        return null
+    }
+}
+
 
 const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
     playground: true,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+    context: ({ req }) => {
+        // console.log(req)
+        // const token = req.get('Authorization') || ''
+        // return { user: getUser(token.replace('Bearer', '')) }
+        // Get the user token from the headers.
+        const token = req.headers.authorization || '';
+
+        // Try to retrieve a user with the token
+        const user = getUser(token);
+
+        // Add the user to the context
+        return { user };
+    },
+    introspection: true,
 });
 
 
