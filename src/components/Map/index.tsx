@@ -16,9 +16,6 @@ export default function GoogleMaps({markers}){
 
 
 
-
-
-
 //   const { loading, error, data } = useQuery(GET_LOCATIONS);
 
 

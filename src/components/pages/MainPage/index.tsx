@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React ,{useState,useEffect}from 'react'
 import AddLocationModal from '../../AddLocationModal.tsx'
 import Map from '../../Map'
 import {Wrapper} from './styles'
@@ -6,9 +6,10 @@ import { Button } from 'antd';
 import 'antd/dist/antd.css';
 import { GET_LOCATIONS,GET_LOCATIONS_BY_SECTOR,useApollo ,createApolloClient} from '../../../apollo';
 import { useQuery, useReactiveVar } from '@apollo/client';
-const main = ({markers}) => {
-console.log(markers)
+const main = () => {
+
     const [markersState,setMarkersState]=useState('all')
+    const [markers,setMarkers]=useState([])
 
 
  
@@ -34,7 +35,17 @@ console.log(markers)
     if( error&& ePrivate&&ePublic )return <div>error</div>
 if(loading&&lPrivate&&lPublic)return <div>Loading ...</div>
 
-console.log(dPrivate,dPublic)
+useEffect(() => {
+    if(markersState==='all')
+    setMarkers(data.getLocations)
+    else if(markersState==='public')
+setMarkers(dPublic.getLocationsBySector)
+
+ else if(markersState==='private')
+setMarkers(dPrivate.getLocationsBySector)
+
+}, [markersState])
+
 
     return (
         <div style={{height:'100vh'}}>
@@ -42,13 +53,11 @@ console.log(dPrivate,dPublic)
             <AddLocationModal/>
                   <Wrapper>
 <Button onClick={()=>{setMarkersState('all')}}>all</Button>
-<Button onClick={()=>{setMarkersState('public')}}>Private</Button>
-<Button onClick={()=>{setMarkersState('private')}}>Public</Button>
+<Button onClick={()=>{setMarkersState('public')}}>Public</Button>
+<Button onClick={()=>{setMarkersState('private')}}>Private</Button>
 
-      </Wrapper>{
-(markersState==='all')?  <Map markers={data.getLocations}/>:<div/>}
-{(markersState==='public')? <Map markers={dPublic.getLocations}/>:<div/>}
-{(markersState==='private')? <Map markers={dPrivate.getLocations}/>:<div/>}
+      </Wrapper>
+ <Map markers={markers}/>
 
       
             
