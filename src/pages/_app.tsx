@@ -2,8 +2,7 @@ import React, { ReactNode } from 'react';
 import { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/client';
  import { useApollo } from "../apollo/useApollo";
-
-
+import Navbar from '../components/NavbarContainer'
 interface Props {
   children: ReactNode | ReactNode[];
 }
@@ -19,6 +18,7 @@ const apolloClient = useApollo(pageProps.initialApolloState);
       <ApolloProvider client={apolloClient}>
      
         <Layout>
+          <Navbar bg='black' children/> 
           <Component {...pageProps} />
         </Layout>
       

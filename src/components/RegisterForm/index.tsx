@@ -2,8 +2,10 @@ import React from 'react'
 import { Form,Input, Button, Checkbox,Card } from 'antd';
 import 'antd/dist/antd.css';
 import { gql, useMutation } from '@apollo/client';
-import {REGISTER_USER} from '../apollo'
-const loginForm = () => {
+import {REGISTER_USER} from '../../apollo'
+
+
+const Index = () => {
 const [registerUser, { data, loading, error }] = useMutation(REGISTER_USER);
 
 
@@ -17,13 +19,7 @@ const [registerUser, { data, loading, error }] = useMutation(REGISTER_USER);
     console.log('Failed:', errorInfo);
   };
     return (
- <Card title="Card title" bordered={false} style={{ width: 300 }}>
-
-
-
-
-
-                <Form
+        <Form
       name="basic"
       labelCol={{ span: 8 }}
       wrapperCol={{ span: 16 }}
@@ -56,8 +52,8 @@ const [registerUser, { data, loading, error }] = useMutation(REGISTER_USER);
         </Button>
       </Form.Item>
     </Form>
-       </Card>
+
     )
 }   
 
-export default loginForm
+export default Index

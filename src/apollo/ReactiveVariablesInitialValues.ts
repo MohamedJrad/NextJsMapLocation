@@ -1,6 +1,7 @@
 import { isLoggedInVar } from './ReactiveVariables';
 
 export const isLoggedInInit = async () => {
+	isLoggedInVar(true)
 	// Auth.currentAuthenticatedUser()
 	// 	.then((user) => {
 	// 		//	console.log('user');
