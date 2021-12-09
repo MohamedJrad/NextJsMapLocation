@@ -39,13 +39,15 @@ Custom JWT  Authentication API with Nodejs , GraphQL and MongoDB
 - *updateLocation(*id*:String,*location*:LocationInput):Boolean*
 - *deleteLocation(*id*:String):Boolean*
 
-     Database:
+
+        Database:
+
 
 MongDB
 
 
 
-Deployment :
+        Deployment :
 
 AWS
 
