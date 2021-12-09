@@ -7,11 +7,22 @@ import {
 } from "react-google-maps";
 
 import {Wrapper,Container } from './styles'
-
+import BottomDrawer from '../ButtonDrawer'
 
 
 export default function GoogleMaps({markers}){
 
+
+
+const [visible,setVisible]=useState(false)
+const [selectedLocation,setLocatedLocation]=useState({
+
+name:{en:'',ar:'',fr:''},
+description:{en:'',ar:'',fr:''},
+address:{en:'',ar:'',fr:''}
+
+
+})
 
 
 const defaultCenter = { lat: 40.748817, lng: -73.985428 };
@@ -20,8 +31,10 @@ const defaultOptions = { scrollwheel: false };
 
 
 
-const onMarkerClicked=()=>{
-console.log('marker clicked')
+const onMarkerClicked=({marker})=>{
+console.log('marker clicked',marker)
+setVisible(true)
+setLocatedLocation(marker)
 }
 
 const RegularMap = withScriptjs(
@@ -33,7 +46,7 @@ const RegularMap = withScriptjs(
     >
         {
             markers.map((marker)=>{
-   return <Marker position={{lat:marker.lat,lng:marker.long} } onClick={onMarkerClicked} />
+   return <Marker position={{lat:marker.lat,lng:marker.long} } onClick={()=>{onMarkerClicked({marker})}} />
             })
         }
   
@@ -50,7 +63,7 @@ const mapElementStyle = { height: '100%' };
 
 
   return (<Container>
-
+<BottomDrawer visible={visible} setVisible={setVisible } data={selectedLocation}/>
           <RegularMap
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCswyDaCzBZXWDM6fQIv_G32I6YE85vyM8"
       loadingElement={<div style={ loadingElementStyle } />}
