@@ -1,13 +1,13 @@
 import React ,{useState,useEffect}from 'react'
-import AddLocationModal from '../../AddLocationModal.tsx'
-import Map from '../../Map'
+import AddLocationModal from '../AddLocationModal.tsx'
+import Map from '../Map'
 import {Wrapper,Container} from './styles'
 import { Button } from 'antd';
 import 'antd/dist/antd.css';
-import { GET_LOCATIONS,GET_LOCATIONS_BY_SECTOR,useApollo ,createApolloClient} from '../../../apollo';
+import { GET_LOCATIONS,GET_LOCATIONS_BY_SECTOR,useApollo ,createApolloClient} from '../../apollo';
 import { useQuery, useReactiveVar } from '@apollo/client';
 import {useWindowSize} from './useWindowSize'
-import SinOutButton from '../../SignOutButton'
+import SinOutButton from '../SignOutButton'
 const main = () => {
 
 

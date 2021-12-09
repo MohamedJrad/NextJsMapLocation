@@ -1,6 +1,6 @@
 import React from 'react';
-import RegisterModal from '../../RegisterModal'
-import LoginModal from '../../LoginModal'
+import RegisterModal from '../RegisterModal'
+import LoginModal from '../LoginModal'
 
 import {Wrapper,StyledCard} from './styles'
 

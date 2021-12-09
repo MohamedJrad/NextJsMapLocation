@@ -151,11 +151,19 @@ export const resolvers = {
         async updateLocation(_, { id, location }) {
             try {
 
+                //  Location.findOneAndUpdate(
+                //      {
+                //          email: 'ada.lovelace@gmail.com'  // search query
+                //      },
+                //      {
+                //          email: 'theoutlander@live.com'   // field:values to update
+                //      },
+                //      {
+                //          new: true,                       // return updated doc
+                //          runValidators: true              // validate before update
+                //      })
 
 
-                return {
-                    token: token, user: user
-                }
             } catch (error) {
                 throw new Error(error.message)
             }
