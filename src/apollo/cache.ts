@@ -1,9 +1,8 @@
 
 import { InMemoryCache } from '@apollo/client';
-import { isLoggedInVar } from './ReactiveVariables';
-import { isLoggedInInit, cartItemsInit } from './ReactiveVariablesInitialValues';
-isLoggedInInit();
-cartItemsInit();
+import { isLoggedInVar ,userVar} from './ReactiveVariables';
+import {userInit } from './ReactiveVariablesInitialValues';
+userInit()
 
 export const cache: InMemoryCache = new InMemoryCache({
 	typePolicies: {
@@ -13,7 +12,17 @@ export const cache: InMemoryCache = new InMemoryCache({
 					read() {
 						return isLoggedInVar();
 					}
+					
 				},
+						getUser: {
+					read() {
+						return userVar();
+					}
+					
+				},
+				
+					
+			
 		
 				launches: {
 					// ...field policy definitions...
