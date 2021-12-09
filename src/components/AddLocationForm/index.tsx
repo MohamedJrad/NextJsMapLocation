@@ -5,34 +5,34 @@ import { gql, useMutation } from '@apollo/client';
 import {ADD_LOCATION} from '../../apollo'
 
 
-const Index = () => {
+const Index = ({closeModal}) => {
 
 
-   
+   const [addLocation,{data,loading,error}]=useMutation(ADD_LOCATION)
 
 
       const onFinish =async (values: any) => {
     console.log('Success:', values);
  
-      // addLocation(
+      addLocation(
+        { 
+        variables: {
+          location:{
+          name:{"ar": "","en": "test","fr": ""},
+         description:{"ar": "","en": "test","fr": ""},
+         address:{"ar": "","en": "test","fr": ""},
+         long:3243,
+         lat:234234,
+         sector:'PUBLIC'}
+        } 
         
         
-      //   // { 
-      //   // variables: {
-      //   //   location:{
-      //   //   name:values.name,
-      //   //  description:'',
-      //   //  address:'',
-      //   //  long:3243,
-      //   //  lat:234234,
-      //   //  sector:''}
-      //   // } 
+        }
         
         
-      //   // }
-        
-        
-        // )
+        )
+
+        closeModal()
      
     };
 

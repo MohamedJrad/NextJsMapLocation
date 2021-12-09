@@ -3,6 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_LOCATIONS = gql`
 query {
   getLocations{
+    id
     name{
       ar
       fr
@@ -30,7 +31,7 @@ query {
 export const GET_LOCATIONS_BY_SECTOR = gql`
 query getLocationsBySector($sector:String!) {
   getLocationsBySector(sector:$sector){
-    _id
+    id
     name{
       ar
       fr
@@ -69,3 +70,11 @@ export const GET_TOKEN = gql`
 		getToken @client
 	}
 `;
+
+export const LAN=gql`
+
+query language{
+  language @client
+}
+
+`

@@ -17,8 +17,8 @@ if (typeof window !== 'undefined') {
 
 
 const httpLink = createHttpLink({
- // uri: 'http://localhost:3000/api/graphql',
- uri:'https://dev.d2y4dojw4nqey7.amplifyapp.com/api/graphql'
+  uri: 'http://localhost:3000/api/graphql',
+ //uri:'https://dev.d2y4dojw4nqey7.amplifyapp.com/api/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
