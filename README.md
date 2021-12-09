@@ -2,30 +2,29 @@
 Arsela s technical test
 
 Main Feature:
-
 Custom JWT  Authentication API with Nodejs , GraphQL and MongoDB
 
-Technologies:
+#Technologies:
 
-Frontend:
+       Frontend:
 
-Next.js
+-Next.js
 
-Apollo Client
+-Apollo Client
 
-styled-componets
+-styled-componets
 
-GoogleMaps API
+-GoogleMaps API
 
-Backend:
+      Backend:
 
-Next.js api
+-Next.js server-side  api
 
-Apollo server 
+-Apollo server 
 
-Mongoose
+-Mongoose
 
-GraphQL API:
+-GraphQL API:
 
 *Query :*
 
@@ -40,9 +39,11 @@ GraphQL API:
 - *updateLocation(*id*:String,*location*:LocationInput):Boolean*
 - *deleteLocation(*id*:String):Boolean*
 
-Database:
+     Database:
 
 MongDB
+
+
 
 Deployment :
 
