@@ -10,14 +10,14 @@ var uuid = require('uuid');
 export const resolvers = {
     Query: {
 
-        async user(root, { id }, { user }) {
-            // try {
-            //     if (!user) throw new Error('You are not authenticated!')
-            //     // return models.User.findByPk(id)
-            // } catch (error) {
-            //     throw new Error(error.message)
-            // }
-        },
+        // async user(root, { id }, { user }) {
+        //     // try {
+        //     //     if (!user) throw new Error('You are not authenticated!')
+        //     //     // return models.User.findByPk(id)
+        //     // } catch (error) {
+        //     //     throw new Error(error.message)
+        //     // }
+        // },
         async getLocations(parent, args, context) {
             // if (!context.user || !context.user.role.includes('admin')) return null;
             try {

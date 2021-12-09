@@ -8,8 +8,19 @@ import { GET_LOCATIONS, GET_LOCATIONS_BY_SECTOR, useApollo, createApolloClient }
 import { useQuery, useReactiveVar } from '@apollo/client';
 import { useWindowSize } from './useWindowSize'
 import SinOutButton from '../SignOutButton'
-const main = () => {
+import {lanVar,LAN} from '../../apollo'
 
+
+
+
+
+const main = () => {
+  const [text,setText]=React.useState({
+     public:'public',
+     all:'all',
+     private:'private'
+ })
+const { data:ldata } = useQuery(LAN);
 
     const size = useWindowSize()
     console.log(size)
@@ -61,15 +72,46 @@ useEffect(() => {
 
     const height = size.height - 100
 
+
+    useEffect(() => {
+switch (ldata.language) {
+  case 'fr':
+ setText({
+     public:'publique',
+     all:'tout',
+     private:'privée'
+ })
+    break;
+  case 'en':
+ setText({
+     public:'public',
+     all:'all',
+     private:'private'
+ })
+    break;
+    case 'ar':
+ setText({
+     public:'عام',
+     all:'الكل',
+     private:'خاص'
+ })
+    break
+  default:
+    //Statements executed when none of
+    //the values match the value of the expression
+    break
+}
+}, [ldata])
+
     return (
         <Container width={size.width} height={height}>
             <SinOutButton />
 
             <AddLocationModal />
             <Wrapper>
-                <Button onClick={() => { setMarkersState('all') }}>all</Button>
-                <Button onClick={() => { setMarkersState('public') }}>Public</Button>
-                <Button onClick={() => { setMarkersState('private') }}>Private</Button>
+                <Button onClick={() => { setMarkersState('all') }}>{text.all}</Button>
+                <Button onClick={() => { setMarkersState('public') }}>{text.public}</Button>
+                <Button onClick={() => { setMarkersState('private') }}>{text.private}</Button>
 
             </Wrapper>
             <Map markers={markers} />
@@ -78,7 +120,7 @@ useEffect(() => {
 
         </Container>
     )
-}
+}      
 
 export default main
 
