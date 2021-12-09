@@ -22,7 +22,7 @@
     "**/*.tsx",
     "custom.d.ts",
     "next.config.js",
-    "src/components/pages/Home/index.jsx"
+    "src/components/Home/index.jsx"
   ],
   "exclude": ["node_modules"]
 }
