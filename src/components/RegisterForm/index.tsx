@@ -50,7 +50,7 @@ if(loading)return <div>Loading ...</div>
         name="email"
         rules={[{ required: true, message: 'Please input your email!' }]}
       >
-        <Input />
+      <Input type='email' />
       </Form.Item>
 
       <Form.Item
