@@ -31,3 +31,11 @@ mutation addLocation($location:LocationInput!){
 }
 `
 
+export const DELETE_LOCATION=gql`
+mutation delete($id:String!)
+{
+  
+  deleteLocation(id:$id)
+}
+
+`

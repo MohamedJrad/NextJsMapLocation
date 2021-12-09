@@ -1,12 +1,17 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Modal, Button } from 'antd';
 import 'antd/dist/antd.css';
-import RegisterForm from '../RegisterForm'
 import AddLocationForm from '../AddLocationForm'
+import {userVar} from '../../apollo'
+import {Wrapper} from './styles'
+
+
 const App = () => {
   const [visible, setVisible] = React.useState(false);
   const [confirmLoading, setConfirmLoading] = React.useState(false);
   const [modalText, setModalText] = React.useState('Content of the modal');
+  const [displayState,setDisplayState]=React.useState('none')
+
 
   const showModal = () => {
     setVisible(true);
@@ -26,7 +31,30 @@ const App = () => {
     setVisible(false);
   };
 
+
+useEffect(() => {
+  const user=userVar()
+  //@ts-ignore
+  if(user.role==='admin'){
+
+    setDisplayState('flex')
+  }
+  else{
+     setDisplayState('none')
+  }
+
+  
+}, [displayState])
+
+
+
   return (
+<Wrapper displayState={displayState}>
+
+
+
+
+  
     <div style={{margin:"10px"}}>
       <Button type="primary" onClick={showModal}>
         Add Location
@@ -42,6 +70,9 @@ const App = () => {
        <AddLocationForm/>
       </Modal>
     </div>
+
+  </Wrapper>
+
   );
 };
 

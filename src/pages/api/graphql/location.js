@@ -14,6 +14,9 @@ var multiLang = new Schema({
 })
 
 var location = new Schema({
+    id: {
+        type: String
+    },
 
     name: {
         type: multiLang

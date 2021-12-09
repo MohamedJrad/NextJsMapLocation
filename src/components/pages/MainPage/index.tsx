@@ -37,11 +37,9 @@ console.log(size)
    
 
 
-
-    if( error&& ePrivate&&ePublic )return <div>error</div>
-if(loading&&lPrivate&&lPublic)return <div>Loading ...</div>
-
 useEffect(() => {
+
+    if(data && dPublic && dPrivate){
     if(markersState==='all')
     setMarkers(data.getLocations)
     else if(markersState==='public')
@@ -49,8 +47,12 @@ setMarkers(dPublic.getLocationsBySector)
 
  else if(markersState==='private')
 setMarkers(dPrivate.getLocationsBySector)
+}
+}, [markersState,markers])
 
-}, [markersState])
+    if( error&& ePrivate&&ePublic )return <div>error</div>
+if(loading&&lPrivate&&lPublic)return <div>Loading ...</div>
+
 
 
 

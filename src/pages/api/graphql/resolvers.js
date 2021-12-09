@@ -3,6 +3,9 @@ const bcrypt = require('bcryptjs')
 const jsonwebtoken = require('jsonwebtoken')
 const User = require('./user')
 const Location = require('./location')
+var mongoose = require('mongoose');
+var uuid = require('uuid');
+
 
 export const resolvers = {
     Query: {
@@ -19,6 +22,7 @@ export const resolvers = {
             // if (!context.user || !context.user.role.includes('admin')) return null;
             try {
                 const locations = Location.find({})
+                console.log(locations.getLocations)
                 return locations
             } catch (error) {
                 throw new Error(error.message)
@@ -104,18 +108,22 @@ export const resolvers = {
 
         },
         async addLocation(_, { location }) {
-            try {
-                console.log(location)
-                // let newLocation = new Location({
-                //     name: location.name,
-                //     description: location.description,
-                //     lat: location.lat,
-                //     long: location.long,
-                //     address: location.address,
-                //     sector: location.sector
 
-                // })
-                // const result = await newLocation.save()
+            const id = uuid.v4()
+            console.log(id)
+            try {
+
+                let newLocation = new Location({
+                    id: uuid.v4().toString(),
+                    name: location.name,
+                    description: location.description,
+                    lat: location.lat,
+                    long: location.long,
+                    address: location.address,
+                    sector: location.sector
+
+                })
+                await newLocation.save()
 
 
 
@@ -128,12 +136,13 @@ export const resolvers = {
         },
         async deleteLocation(_, { id }) {
             try {
+                await Location.findOneAndRemove({
+                    id: id
+                })
+                return true
 
 
 
-                return {
-                    token: token, user: user
-                }
             } catch (error) {
                 throw new Error(error.message)
             }

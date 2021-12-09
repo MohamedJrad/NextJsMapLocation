@@ -33,6 +33,7 @@ enum Sector{
  }
 
  input LocationInput {
+
    name:multiLangInput
    description:multiLangInput
    lat:Float
