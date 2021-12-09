@@ -37,6 +37,7 @@
     "apollo3-cache-persist": "0.12.1",
     "bcryptjs": "^2.4.3",
     "compose": "0.1.2",
+    "country-flag-icons": "^1.4.19",
     "formik": "2.2.9",
     "graphql": "15.6.0",
     "jsonwebtoken": "^8.5.1",

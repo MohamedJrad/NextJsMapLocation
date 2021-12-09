@@ -1,6 +1,6 @@
 
 import { InMemoryCache } from '@apollo/client';
-import { isLoggedInVar ,userVar} from './ReactiveVariables';
+import { isLoggedInVar ,userVar,lanVar} from './ReactiveVariables';
 import {userInit } from './ReactiveVariablesInitialValues';
 userInit()
 
@@ -17,6 +17,14 @@ export const cache: InMemoryCache = new InMemoryCache({
 						getUser: {
 					read() {
 						return userVar();
+					}
+					
+				},
+
+
+					language: {
+					read() {
+						return lanVar();
 					}
 					
 				},

@@ -11,7 +11,7 @@ import BottomDrawer from '../ButtonDrawer'
 
 
 export default function GoogleMaps({markers}){
-
+console.log(markers)
 
 
 const [visible,setVisible]=useState(false)
@@ -32,6 +32,7 @@ const defaultOptions = { scrollwheel: false };
 
 
 const onMarkerClicked=({marker})=>{
+
 console.log('marker clicked',marker)
 setVisible(true)
 setLocatedLocation(marker)

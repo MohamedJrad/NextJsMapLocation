@@ -31,6 +31,9 @@ const App = () => {
     setVisible(false);
   };
 
+  const closeModal=()=>{
+    setVisible(false)
+  }
 
 useEffect(() => {
   const user=userVar()
@@ -67,7 +70,7 @@ useEffect(() => {
         onCancel={handleCancel}
          footer={[]}
       >
-       <AddLocationForm/>
+       <AddLocationForm closeModal={closeModal}/>
       </Modal>
     </div>
 
