@@ -1,23 +1,44 @@
 import React from 'react'
-import { Form,Input, Button, Checkbox,Card } from 'antd';
+import { Form,Input, Button } from 'antd';
 import 'antd/dist/antd.css';
-import { gql, useMutation } from '@apollo/client';
-import {LOGIN_USER} from '../../apollo'
+import { useMutation } from '@apollo/client';
+import {LOGIN_USER,userVar,isLoggedInVar} from '../../apollo'
+
 
 
 const Index = () => {
-const [registerUser, { data, loading, error }] = useMutation(LOGIN_USER);
+const [LoginUser, { data, loading, error }] = useMutation(LOGIN_USER);
 
 
+    
       const onFinish =async (values: any) => {
-    console.log('Success:', values);
-      const d = await registerUser({ variables: {email:values.email,password:values.password} })
-       console.log(d)
+          
+console.log('Success:', values);
+      LoginUser({ variables: {email:values.email,password:values.password} })
     };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
+
+if(error) return <div>error</div>
+
+if(loading)return <div>Loading ...</div>
+
+if(data){
+
+       
+  //@ts-ignore
+  const token=data.login.token
+  //@ts-ignore
+  const user=data.login.user
+  
+  userVar(user)
+  localStorage.setItem("token", JSON.stringify(token))
+  localStorage.setItem("user",JSON.stringify(user))
+  isLoggedInVar(true)
+
+       }
     return (
         <Form
       name="basic"

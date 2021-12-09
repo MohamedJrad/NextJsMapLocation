@@ -1,6 +1,4 @@
 import React from 'react';
-import LoginForm from '../../loginForm'
-import Modal from '../../modal'
 import AuthPage from '../AuthenticationPage'
 import MainPage from '../MainPage'
 import { GET_IS_LOGGEDIN } from '../../../apollo';

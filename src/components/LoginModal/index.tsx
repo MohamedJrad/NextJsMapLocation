@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Button } from 'antd';
 import 'antd/dist/antd.css';
-import LoginForm from '../loginForm'
+import LoginForm from '../LoginForm '
 const App = () => {
   const [visible, setVisible] = React.useState(false);
   const [confirmLoading, setConfirmLoading] = React.useState(false);

@@ -7,7 +7,7 @@ export const Container=styled.div<{displayState}>`
 top:-20px;
 right: 20px;
 margin: 10px; */
-
+margin: 10px; 
 
 
 
