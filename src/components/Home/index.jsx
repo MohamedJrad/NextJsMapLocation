@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthPage from '../AuthenticationPage'
 import MainPage from '../MainPage'
-import { GET_IS_LOGGEDIN } from '../../../apollo';
+import { GET_IS_LOGGEDIN } from '../../apollo';
 import { useQuery } from '@apollo/client';
 const Index = () => {
 
