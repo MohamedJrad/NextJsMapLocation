@@ -11,7 +11,12 @@ const Index = () => {
     return (
         <Wrapper>
            
-        
+               <div >
+                 <p>Admin:</p>
+                 <p> admin@test.com</p>
+                 <p>123456</p>
+                
+             </div>
             <StyledCard >
                    <LoginModal/>
      
@@ -21,6 +26,7 @@ const Index = () => {
                        <RegisterModal/>
      
              </StyledCard>
+      
     
         </Wrapper>
     );

@@ -48,7 +48,7 @@ enum Sector{
     user: User!
   }
   type Query {
-    user(email: String!): User
+ 
     getLocationsBySector(sector:String!):[Location]
     getLocations:[Location]
   }
