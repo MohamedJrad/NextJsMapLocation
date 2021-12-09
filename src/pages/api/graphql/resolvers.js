@@ -15,7 +15,8 @@ export const resolvers = {
             //     throw new Error(error.message)
             // }
         },
-        async getLocations(root) {
+        async getLocations(parent, args, context) {
+            // if (!context.user || !context.user.role.includes('admin')) return null;
             try {
                 const locations = Location.find({})
                 return locations

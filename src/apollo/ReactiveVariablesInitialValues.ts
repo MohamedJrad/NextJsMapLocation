@@ -1,7 +1,7 @@
-import { isLoggedInVar } from './ReactiveVariables';
+import { isLoggedInVar,userVar } from './ReactiveVariables';
 
 export const isLoggedInInit = async () => {
-	isLoggedInVar(true)
+
 	// Auth.currentAuthenticatedUser()
 	// 	.then((user) => {
 	// 		//	console.log('user');
@@ -16,18 +16,29 @@ export const isLoggedInInit = async () => {
 	// 	});
 };
 
-export const cartItemsInit = () => {
-	if (typeof window !== 'undefined') {
-		// try {
-		// 	const result = JSON.parse(localStorage.getItem('cartItems'));
-		// 	console.log(result);
-		// 	if (result !== null) {
-		// 		console.log('not null');
-		// 		console.log('localstorage', result);
-		// 		cartItemsVar(result);
-		// 	}
-		// } catch (err) {
-		// 	console.log(err);
-		// }
+export const userInit=async()=>{
+if (typeof window !== 'undefined') {
+	
+		try {
+			
+
+			const result = JSON.parse(localStorage.getItem('user')!);
+		
+			if (result !== null) {
+			
+				userVar(result)
+				isLoggedInVar(true)
+
+			}else{
+				isLoggedInVar(false)
+
+			}
+		} catch (err) {
+			console.log(err);
+		}
 	}
-};
+
+
+}
+
+

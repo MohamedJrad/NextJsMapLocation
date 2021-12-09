@@ -1,18 +1,28 @@
 import React from 'react';
-import LoginForm from '../../loginForm'
-import Modal from '../../modal'
 import RegisterModal from '../../RegisterModal'
+import LoginModal from '../../LoginModal'
+
+import {Wrapper,StyledCard} from './styles'
 
 
 const Index = () => {
 
 
     return (
-        <div>
-           <RegisterModal/>
-            <Modal />
-            
-        </div>
+        <Wrapper>
+           
+        
+            <StyledCard >
+                   <LoginModal/>
+     
+     
+             </StyledCard>
+                <StyledCard >
+                       <RegisterModal/>
+     
+             </StyledCard>
+    
+        </Wrapper>
     );
 };
 

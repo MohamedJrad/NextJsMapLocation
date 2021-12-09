@@ -27,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div style={{margin:"10px"}}>
       <Button type="primary" onClick={showModal}>
         Add Location
       </Button>
@@ -41,7 +41,7 @@ const App = () => {
       >
        <AddLocationForm/>
       </Modal>
-    </>
+    </div>
   );
 };
 

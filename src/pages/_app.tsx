@@ -18,7 +18,7 @@ const apolloClient = useApollo(pageProps.initialApolloState);
       <ApolloProvider client={apolloClient}>
      
         <Layout>
-          <Navbar bg='black' children/> 
+          <Navbar bg='blue' children/> 
           <Component {...pageProps} />
         </Layout>
       

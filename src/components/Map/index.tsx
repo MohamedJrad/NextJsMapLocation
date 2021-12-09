@@ -14,12 +14,6 @@ export default function GoogleMaps({markers}){
 
 
 
-
-
-//   const { loading, error, data } = useQuery(GET_LOCATIONS);
-
-
-
 const defaultCenter = { lat: 40.748817, lng: -73.985428 };
 
 const defaultOptions = { scrollwheel: false };
@@ -47,10 +41,9 @@ const RegularMap = withScriptjs(
   ))
 );
 
-const loadingElementStyle = { height: '100vh' };
-const containerElementStyle = { height: '90%' };
+const loadingElementStyle = { height: '100%' };
+const containerElementStyle = { height: '100%' };
 const mapElementStyle = { height: '100%' };
-
 
 
 

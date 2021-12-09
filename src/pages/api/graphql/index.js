@@ -30,13 +30,20 @@ const apolloServer = new ApolloServer({
         // const token = req.get('Authorization') || ''
         // return { user: getUser(token.replace('Bearer', '')) }
         // Get the user token from the headers.
-        const token = req.headers.authorization || '';
+        // const token = req.headers.authorization || '';
 
-        // Try to retrieve a user with the token
-        const user = getUser(token);
+        // // Try to retrieve a user with the token
+        // const user = getUser(token);
+
+
+
+        // if (!user) throw new AuthenticationError('you must be logged in');
+
+
+
 
         // Add the user to the context
-        return { user };
+        // return { user };
     },
     introspection: true,
 });

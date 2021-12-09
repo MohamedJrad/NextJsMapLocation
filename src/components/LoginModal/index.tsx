@@ -1,11 +1,47 @@
 import React from 'react'
+import { Modal, Button } from 'antd';
+import 'antd/dist/antd.css';
+import LoginForm from '../loginForm'
+const App = () => {
+  const [visible, setVisible] = React.useState(false);
+  const [confirmLoading, setConfirmLoading] = React.useState(false);
+  const [modalText, setModalText] = React.useState('Content of the modal');
 
-const index = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const showModal = () => {
+    setVisible(true);
+  };
 
-export default index
+  const handleOk = () => {
+    setModalText('The modal will be closed after two seconds');
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setVisible(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log('Clicked cancel button');
+    setVisible(false);
+  };
+
+  return (
+    <>
+      <Button type="primary" onClick={showModal}>
+        Login
+      </Button>
+      <Modal
+        title="Title"
+        visible={visible}
+        onOk={handleOk}
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+         footer={[]}
+      >
+       <LoginForm/>
+      </Modal>
+    </>
+  );
+};
+
+export default App

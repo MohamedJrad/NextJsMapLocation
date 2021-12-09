@@ -12,12 +12,15 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 10px;
 
 `;
 
-export const Container=styled.div`
-width: 100%;
-height: 90vh;
+export const Container=styled.div<{width,height}>`
+display: flex;
+flex-direction: column;
+ width: ${props => props.width}px;
+height: ${props => props.height}px;
 
 `
 

@@ -56,3 +56,15 @@ export const GET_IS_LOGGEDIN = gql`
 		isLoggedIn @client
 	}
 `;
+
+export const GET_USER = gql`
+	query GetUser {
+		getUser @client
+	}
+`;
+
+export const GET_TOKEN = gql`
+	query GetToken {
+		getToken @client
+	}
+`;

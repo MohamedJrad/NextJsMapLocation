@@ -1,12 +1,18 @@
 import React ,{useState,useEffect}from 'react'
 import AddLocationModal from '../../AddLocationModal.tsx'
 import Map from '../../Map'
-import {Wrapper} from './styles'
+import {Wrapper,Container} from './styles'
 import { Button } from 'antd';
 import 'antd/dist/antd.css';
 import { GET_LOCATIONS,GET_LOCATIONS_BY_SECTOR,useApollo ,createApolloClient} from '../../../apollo';
 import { useQuery, useReactiveVar } from '@apollo/client';
+import {useWindowSize} from './useWindowSize'
+import SinOutButton from '../../SignOutButton'
 const main = () => {
+
+
+const size=useWindowSize()
+console.log(size)
 
     const [markersState,setMarkersState]=useState('all')
     const [markers,setMarkers]=useState([])
@@ -47,10 +53,18 @@ setMarkers(dPrivate.getLocationsBySector)
 }, [markersState])
 
 
+
+
+
+
+
+const height =size.height-100
+
     return (
-        <div style={{height:'100vh'}}>
-            Hello from Main
-            <AddLocationModal/>
+        <Container width={size.width} height={height}>
+             <SinOutButton/>
+         
+            <AddLocationModal />
                   <Wrapper>
 <Button onClick={()=>{setMarkersState('all')}}>all</Button>
 <Button onClick={()=>{setMarkersState('public')}}>Public</Button>
@@ -61,21 +75,9 @@ setMarkers(dPrivate.getLocationsBySector)
 
       
             
-        </div>
+        </Container>
     )
 }
 
 export default main
 
-export async function getServerSideProps() {
-    const client = createApolloClient()
-  const { data } = await client.query({
-    query: GET_LOCATIONS
-  });
-
-  return {
-    props: {
-     markers: data.getLocations
-    },
-  };
-}
