@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # NextJsMapLocation
 
 Arsela s technical test
