@@ -3,8 +3,7 @@
 
 Arsela s technical test
 
-# Main Feature:
-Custom JWT Authentication API with Nodejs , GraphQL and MongoDB
+# Main Feature: Custom JWT Authentication API with Nodejs , GraphQL and MongoDB
 
 #Technologies:
 
